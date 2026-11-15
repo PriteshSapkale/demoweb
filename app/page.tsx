@@ -166,14 +166,14 @@ export default function Home() {
 
       <section className="faq section-pad">
         <div className="container faq-grid">
-          <div><SectionEyebrow>GOOD TO KNOW</SectionEyebrow><h2>Questions before<br/><em>the first order.</em></h2><p>Still figuring out your packaging specifications? That's a good place to start.</p><a className="text-link" href="#quote">Ask us directly <ArrowUpRight size={15}/></a></div>
+          <div><SectionEyebrow>GOOD TO KNOW</SectionEyebrow><h2>Questions before<br/><em>the first order.</em></h2><p>Still figuring out your packaging specifications? That&apos;s a good place to start.</p><a className="text-link" href="#quote">Ask us directly <ArrowUpRight size={15}/></a></div>
           <div className="faq-list">{faqs.map(([q, a], i) => <div className={`faq-item ${openFaq === i ? "faq-open" : ""}`} key={q}><button onClick={() => setOpenFaq(openFaq === i ? null : i)} aria-expanded={openFaq === i}><span>{q}</span><ChevronDown size={18}/></button>{openFaq === i && <p>{a}</p>}</div>)}</div>
         </div>
       </section>
 
       <section className="quote-section section-pad" id="quote">
         <div className="container quote-grid">
-          <div className="quote-copy"><SectionEyebrow light>LET'S TALK PACKAGING</SectionEyebrow><h2>Tell us what<br/>you need to <em>move.</em></h2><p>Share a few details about your product and packaging requirement. The more you can tell us, the better we can understand your brief.</p><div className="quote-contact"><span>BASED IN</span><b>Maharashtra, India</b><span>EMAIL</span><b>{site.email}</b><small>Replace this placeholder email before launch.</small></div></div>
+          <div className="quote-copy"><SectionEyebrow light>LET&apos;sS TALK PACKAGING</SectionEyebrow><h2>Tell us what<br/>you need to <em>move.</em></h2><p>Share a few details about your product and packaging requirement. The more you can tell us, the better we can understand your brief.</p><div className="quote-contact"><span>BASED IN</span><b>Maharashtra, India</b><span>EMAIL</span><b>{site.email}</b><small>Replace this placeholder email before launch.</small></div></div>
           <form className="quote-form" onSubmit={submitQuote}>
             <div className="form-heading"><div><span>01 / PROJECT ENQUIRY</span><h3>Request a quotation</h3></div><ArrowUpRight size={21}/></div>
             <div className="form-row"><label>Your name *<input required minLength={2} value={form.name} onChange={e => update("name", e.target.value)} placeholder="Name"/></label><label>Company name<input value={form.company} onChange={e => update("company", e.target.value)} placeholder="Business / organisation"/></label></div>
@@ -189,7 +189,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="final-cta"><div className="container final-cta-inner"><div><span>THE NEXT STEP STARTS HERE</span><h2>Let's build a better<br/><em>way to deliver.</em></h2></div><a href="#quote" className="round-cta" aria-label="Request a quote"><MoveUpRight size={27}/></a></div></section>
+      <section className="final-cta"><div className="container final-cta-inner"><div><span>THE NEXT STEP STARTS HERE</span><h2>Let&apos;s build a better<br/><em>way to deliver.</em></h2></div><a href="#quote" className="round-cta" aria-label="Request a quote"><MoveUpRight size={27}/></a></div></section>
 
       <footer className="footer" id="contact"><div className="container footer-main"><div className="footer-brand"><Logo light/><p>Corrugated packaging solutions for businesses building what comes next.</p><span className="footer-location">MAHARASHTRA, INDIA</span></div><div className="footer-col"><span>EXPLORE</span><a href="#products">Products</a><a href="#industries">Industries</a><a href="#capabilities">Capabilities</a><a href="#about">About us</a></div><div className="footer-col"><span>GET IN TOUCH</span><a href="#quote">Request a quote</a><a href={`mailto:${site.email}`}>Email the team</a>{waUrl ? <a href={waUrl} target="_blank" rel="noreferrer">WhatsApp</a> : <span className="footer-muted">WhatsApp contact to be added</span>}</div><div className="footer-stamp"><span>K</span><small>PACKAGING<br/>WITH PURPOSE</small></div></div><div className="container footer-bottom"><span>© {new Date().getFullYear()} KRAFTLINE PACKAGING. ALL RIGHTS RESERVED.</span><span>BUILT TO PROTECT. DESIGNED TO DELIVER.</span><a href="#home">BACK TO TOP ↑</a></div></footer>
       {site.whatsapp && <a className="whatsapp-float" href={waUrl} target="_blank" rel="noreferrer" aria-label="Chat with KRAFTLINE on WhatsApp"><MessageCircle size={22}/></a>}
